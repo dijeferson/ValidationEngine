@@ -28,7 +28,7 @@ namespace ValidationEngine
             Users users = new Users
             {
                 UserID = "fulano[at]site.com",
-                UserName = "Jefersons"
+                UserName = "Jefersons-123"
             };
 
             engine.Validate(users);

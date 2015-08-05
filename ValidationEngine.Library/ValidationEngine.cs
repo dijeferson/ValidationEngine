@@ -14,17 +14,28 @@ namespace ValidationEngine.Library
         #endregion
 
         #region Public Attributes
+        /// <summary>
+        /// The list of errors per property
+        /// </summary>
         public Dictionary<PropertyInfo, List<string>> Error
         {
             get { return error; }
         }
         #endregion
 
+        #region Constructors
         public ValidationEngine()
         {
             error = new Dictionary<PropertyInfo, List<string>>();
         }
+        #endregion
 
+        #region Methods
+        /// <summary>
+        /// Validate the class properties.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="item">Class instance of type T</param>
         public void Validate<T>(T item)
         {
             var properties = item.GetType().GetRuntimeProperties();
@@ -56,11 +67,9 @@ namespace ValidationEngine.Library
 
                         this.error.Add(property, errorList);
                     }
-
-
                 }
-
             }
         }
+        #endregion
     }
 }

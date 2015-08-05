@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationEngine", "Validat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationEngine.Library", "ValidationEngine.Library\ValidationEngine.Library.csproj", "{643ED812-8060-410F-AEDB-E8A3C3F01172}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationEngine.Tests", "ValidationEngine.Tests\ValidationEngine.Tests.csproj", "{C7C5637F-E839-42BF-B263-DE3B8A4215E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{643ED812-8060-410F-AEDB-E8A3C3F01172}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{643ED812-8060-410F-AEDB-E8A3C3F01172}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{643ED812-8060-410F-AEDB-E8A3C3F01172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7C5637F-E839-42BF-B263-DE3B8A4215E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C5637F-E839-42BF-B263-DE3B8A4215E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7C5637F-E839-42BF-B263-DE3B8A4215E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7C5637F-E839-42BF-B263-DE3B8A4215E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,16 +12,22 @@ namespace ValidationEngine.Library
     [AttributeUsage(AttributeTargets.Property)]
     public class ValidationAttribute : System.Attribute
     {
+        #region Constructors
         public ValidationAttribute()
         {
             Required = false;
-            MaxSize = int.MaxValue;
-            MinSize = int.MinValue;
-            MaxValue = int.MaxValue;
-            MinValue = int.MinValue;
+            MaxSize = -1;
+            MinSize = -1;
+            MaxValue = -1;
+            MinValue = -1;
             AllowedInputType = InputType.Any;
         }
+        #endregion
 
+        #region Enums
+        /// <summary>
+        /// Allowed input types 
+        /// </summary>
         public enum InputType
         {
             Numeric,
@@ -32,7 +38,9 @@ namespace ValidationEngine.Library
             Any
         }
 
-
+        /// <summary>
+        /// Error codes used in the error treatment
+        /// </summary>
         public enum ErrorCode
         {
             Valid = 0,
@@ -41,17 +49,42 @@ namespace ValidationEngine.Library
             IsBetweenMinMaxValueError = 4,
             IsCorrectInputTypeError = 8,
             PropertyNotInstantiated = 16
-
         }
+        #endregion
 
+        #region Public Properties
+        /// <summary>
+        /// Check if the field is required (not empty or null)
+        /// </summary>
         public bool Required { get; set; }
+
+        /// <summary>
+        /// Check the maximum length of the field as string
+        /// </summary>
         public int MaxSize { get; set; }
+
+        /// <summary>
+        /// Check the minimum length of the field as string
+        /// </summary>
         public int MinSize { get; set; }
 
+        /// <summary>
+        /// Check the maximum integer value allowed in the field
+        /// </summary>
         public int MaxValue { get; set; }
+
+        /// <summary>
+        /// Check the minimum integer value allowed in the field
+        /// </summary>
         public int MinValue { get; set; }
 
+        /// <summary>
+        /// Check for the data format as string
+        /// </summary>
         public InputType AllowedInputType { get; set; }
+        #endregion
+
+        #region Methods
 
         public ErrorCode IsValid(object item)
         {
@@ -82,9 +115,13 @@ namespace ValidationEngine.Library
         {
             ErrorCode isValid = ErrorCode.Valid;
 
-            var q = (string)item;
-            if (q != null && (q.Length > MaxSize || q.Length < MinSize))
-                isValid = ErrorCode.IsBetweenMinMaxSizeError;
+            // Check if the validation has been activated
+            if (MaxSize != -1 && MinSize != -1)
+            {
+                var q = (string)item;
+                if (q != null && (q.Length > MaxSize || q.Length < MinSize))
+                    isValid = ErrorCode.IsBetweenMinMaxSizeError;
+            }
 
             return isValid;
         }
@@ -93,16 +130,14 @@ namespace ValidationEngine.Library
         {
             ErrorCode isValid = ErrorCode.Valid;
 
-            decimal q = 0;
-
-            if (item != null)
+            if (MaxValue != -1 && MinValue != -1 && item != null)
             {
+                decimal q = 0;
                 var success = decimal.TryParse(item.ToString(), out q);
-
-                if (q > MaxValue || q < MinValue || !success)
+                
+                if (q > MaxValue || q < MinValue)
                     isValid = ErrorCode.IsBetweenMinMaxValueError;
             }
-
             return isValid;
         }
 
@@ -136,6 +171,7 @@ namespace ValidationEngine.Library
 
             return isValid;
         }
+        #endregion
     }
 }
 
