@@ -18,6 +18,10 @@ A .NET Attribute based validation framework for Model and Domain classes
 - URL, Web URL patter.
 - Any, Any character or pattern is accepted.
 
+## Requirements
+
+The project was developed and tested using Visual Studio 2013 and .NET Framework 4.5.
+
 ## Usage
 
 ```
