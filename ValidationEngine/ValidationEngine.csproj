@@ -49,9 +49,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ValidationEngine.Library\ValidationEngine.Library.csproj">
+    <ProjectReference Include="..\ValidationEngine.Library\Validation.Library.csproj">
       <Project>{643ed812-8060-410f-aedb-e8a3c3f01172}</Project>
-      <Name>ValidationEngine.Library</Name>
+      <Name>Validation.Library</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

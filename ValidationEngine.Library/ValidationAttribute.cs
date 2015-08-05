@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using ValidationEngine.Library;
+using Validation.Library;
 
 
-namespace ValidationEngine.Library
+namespace Validation.Library
 {
     [AttributeUsage(AttributeTargets.Property)]
     public class ValidationAttribute : System.Attribute

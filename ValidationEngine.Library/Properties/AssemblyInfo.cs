@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ValidationEngine.Library")]
+[assembly: AssemblyTitle("Validation.Library")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("JefersonSantos.com")]
-[assembly: AssemblyProduct("ValidationEngine.Library")]
+[assembly: AssemblyProduct("Validation.Library")]
 [assembly: AssemblyCopyright("Copyright © Jeferson Santos 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

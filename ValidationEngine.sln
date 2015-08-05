@@ -5,9 +5,9 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationEngine", "ValidationEngine\ValidationEngine.csproj", "{C3ECF784-7E2B-4FA1-BF95-D875402732E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationEngine.Library", "ValidationEngine.Library\ValidationEngine.Library.csproj", "{643ED812-8060-410F-AEDB-E8A3C3F01172}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation.Library", "ValidationEngine.Library\Validation.Library.csproj", "{643ED812-8060-410F-AEDB-E8A3C3F01172}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ValidationEngine.Tests", "ValidationEngine.Tests\ValidationEngine.Tests.csproj", "{C7C5637F-E839-42BF-B263-DE3B8A4215E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation.Tests", "ValidationEngine.Tests\Validation.Tests.csproj", "{C7C5637F-E839-42BF-B263-DE3B8A4215E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

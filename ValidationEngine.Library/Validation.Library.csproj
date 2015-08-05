@@ -7,8 +7,8 @@
     <ProjectGuid>{643ED812-8060-410F-AEDB-E8A3C3F01172}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ValidationEngine.Library</RootNamespace>
-    <AssemblyName>ValidationEngine.Library</AssemblyName>
+    <RootNamespace>Validation.Library</RootNamespace>
+    <AssemblyName>Validation.Library</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

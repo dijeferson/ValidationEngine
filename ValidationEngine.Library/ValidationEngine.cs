@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ValidationEngine.Library
+namespace Validation.Library
 {
     public class ValidationEngine
     {
