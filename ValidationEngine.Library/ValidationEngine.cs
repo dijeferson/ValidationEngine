@@ -44,6 +44,8 @@ namespace Validation.Library
             {
                 var customAtt = property.GetCustomAttributes(typeof(ValidationAttribute), true);
 
+                this.error.Add(property, new List<string>());
+
                 foreach (var att in customAtt)
                 {
                     var valAtt = att as ValidationAttribute;
@@ -56,7 +58,7 @@ namespace Validation.Library
                     {
                         var errorList = new List<string>();
 
-                        for (int bit = 0; bit < 5; bit++)
+                        for (int bit = 0; bit < Enum.GetNames(typeof(ValidationAttribute.ErrorCode)).Count(); bit++)
                         {
                             int cbit = (int)Math.Pow(2, bit);
                             var cerror = (int)validity;
@@ -65,7 +67,7 @@ namespace Validation.Library
                                 errorList.Add(Enum.GetName(typeof(ValidationAttribute.ErrorCode), cbit));
                         }
 
-                        this.error.Add(property, errorList);
+                        this.error.Single(q => q.Key == property).Value.AddRange(errorList);
                     }
                 }
             }

@@ -116,10 +116,10 @@ namespace Validation.Library
             ErrorCode isValid = ErrorCode.Valid;
 
             // Check if the validation has been activated
-            if (MaxSize != -1 && MinSize != -1)
+            if (MaxSize != -1 || MinSize != -1)
             {
                 var q = (string)item;
-                if (q != null && (q.Length > MaxSize || q.Length < MinSize))
+                if (q != null && ((MaxSize >-1 && q.Length > MaxSize) || (MinSize > -1 && q.Length < MinSize)))
                     isValid = ErrorCode.IsBetweenMinMaxSizeError;
             }
 
@@ -130,12 +130,12 @@ namespace Validation.Library
         {
             ErrorCode isValid = ErrorCode.Valid;
 
-            if (MaxValue != -1 && MinValue != -1 && item != null)
+            if (MaxValue != -1 || MinValue != -1 && item != null)
             {
                 decimal q = 0;
                 var success = decimal.TryParse(item.ToString(), out q);
                 
-                if (q > MaxValue || q < MinValue)
+                if ((MaxValue > -1 && q < MaxValue) || (MinValue > -1 && q < MinValue))
                     isValid = ErrorCode.IsBetweenMinMaxValueError;
             }
             return isValid;

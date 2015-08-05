@@ -15,7 +15,7 @@ namespace Validation
         [Validation(Required = true, MaxSize = 8, MinSize = 1, AllowedInputType = ValidationAttribute.InputType.Any)]
         public string UserName { get; set; }
 
-        [Validation(Required = false, MaxSize = 100, MinSize = 5, AllowedInputType = ValidationAttribute.InputType.Alphanumeric)]
+        [Validation(MaxSize = 10, MinSize=0)]
         public string UserCountry { get; set; }
 
     }
@@ -28,10 +28,11 @@ namespace Validation
             Users users = new Users
             {
                 UserID = "fulano[at]site.com",
-                UserName = "Jefersons-123"
+                UserName = "Jefersons-123",
+                UserCountry = "Supercalifragilisticexpialidocious"
             };
 
-                
+            engine.Validate(users);
 
             foreach (var prop in engine.Error)
                 foreach (var msg in prop.Value)
