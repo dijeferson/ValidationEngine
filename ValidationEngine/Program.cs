@@ -19,7 +19,7 @@ namespace Validation
         public string UserCountry { get; set; }
 
     }
-
+    
     class Program
     {
         static void Main(string[] args)

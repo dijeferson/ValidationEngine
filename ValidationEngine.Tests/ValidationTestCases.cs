@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Validation.Library;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
 namespace Validation.Tests
 {
@@ -41,8 +42,8 @@ namespace Validation.Tests
 
                 [Validation(MinSize = 5)]
                 public string MinField { get; set; }
-                
-                [Validation(MaxSize=10, MinSize = 5)]
+
+                [Validation(MaxSize = 10, MinSize = 5)]
                 public string MaxMinField { get; set; }
 
             }
@@ -78,6 +79,24 @@ namespace Validation.Tests
                 public string URLField { get; set; }
             }
 
+        }
+
+        [TestInitialize]
+        public void Setup()
+        {
+            engine = new ValidationEngine();
+        }
+
+        [TestCleanup]
+        public void TearDown()
+        {
+            engine = null;
+        }
+
+        [TestMethod, ExpectedException(typeof(NullReferenceException))]
+        public void TestEngineInstance()
+        {
+            engine.Validate(this);
         }
 
         [TestMethod]
