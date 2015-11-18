@@ -93,7 +93,7 @@ namespace Validation.Tests
             engine = null;
         }
 
-        [TestMethod, ExpectedException(typeof(NullReferenceException))]
+        [TestMethod]
         public void TestEngineInstance()
         {
             engine.Validate(this);
