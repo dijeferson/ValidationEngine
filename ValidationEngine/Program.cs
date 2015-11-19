@@ -25,6 +25,7 @@ namespace Validation
         static void Main(string[] args)
         {
             var engine = new ValidationEngine();
+
             Users users = new Users
             {
                 UserID = "fulano[at]site.com",
