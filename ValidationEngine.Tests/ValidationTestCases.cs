@@ -96,7 +96,6 @@ namespace Validation.Tests
         [TestMethod]
         public void TestEngineInstance()
         {
-            // Deve validar.
             engine.Validate(this);
         }
 
