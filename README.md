@@ -1,4 +1,3 @@
-
 # ValidationEngine
 A .NET Attribute based validation framework for Model and Domain classes
 
@@ -11,7 +10,7 @@ A .NET Attribute based validation framework for Model and Domain classes
 - MinValue:INT, check the minimum integer value allowed in the field.
 - AllowedInputType:ENUM, check for the data format as string.
 
-### AllowedInputType Enum
+## AllowedInputType Enum
 - Numeric, Only numbers.
 - Alphanumeric, Letters, numbers, and symbols.
 - Alphabetic, Only letters.
