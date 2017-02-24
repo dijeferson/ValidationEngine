@@ -1,5 +1,5 @@
-
 # ValidationEngine
+
 A .NET Attribute based validation framework for Model and Domain classes
 
 ## Available Attribute X Validations
@@ -12,6 +12,7 @@ A .NET Attribute based validation framework for Model and Domain classes
 - AllowedInputType:ENUM, check for the data format as string.
 
 ### AllowedInputType Enum
+
 - Numeric, Only numbers.
 - Alphanumeric, Letters, numbers, and symbols.
 - Alphabetic, Only letters.
