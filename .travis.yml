@@ -1,0 +1,9 @@
+language: csharp
+mono: latest
+dotnet: 3.1
+solution: ValidationEngine.sln
+script:
+  - dotnet clean
+  - dotnet restore
+  - dotnet build  
+  - dotnet test
