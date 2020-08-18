@@ -4,12 +4,12 @@ A .NET Attribute based validation framework for Model and Domain classes
 
 ## Available Attribute X Validations
 
-- Required:BOOL, check if the field is required (not empty or null).
-- MaxSize:INT, check the maximum length of the field as string.
-- MinSize:INT, check the minimum length of the field as string.
-- MaxValue:INT, check the maximum integer value allowed in the field.
-- MinValue:INT, check the minimum integer value allowed in the field.
-- AllowedInputType:ENUM, check for the data format as string.
+- `Required:BOOL`, checks if the field is required (not empty or null).
+- `MaxSize:INT`, checks the maximum length of the field as string.
+- `MinSize:INT`, checks the minimum length of the field as string.
+- `MaxValue:INT`, checks the maximum integer value allowed in the field.
+- `MinValue:INT`, checks the minimum integer value allowed in the field.
+- `AllowedInputType:ENUM`, checks for the data format as string.
 
 
 ## AllowedInputType Enum
